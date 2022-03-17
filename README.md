@@ -7,6 +7,8 @@ Splatoon 2 Salmon Run seed modifier
 - DevkitA64
 - Unix like operating system(Ubuntu, macOS)
   - Recommend WSL2 on Window10/11
+  - 
+### Get Started for Ubuntu on WSL2
 
 ### Get Started for macOS
 
@@ -54,4 +56,49 @@ dmntcht.c
 linking Ocean-Modifier.elf
 built ... Ocean-Modifier.nacp
 built ... Ocean-Modifier.ovl
+```
+
+## How to use
+
+### Requirements
+
+- [nx-ovlloader](https://github.com/WerWolv/nx-ovlloader/releases/tag/v1.0.6)
+- [Tesla-Menu](https://github.com/WerWolv/Tesla-Menu/releases/tag/v1.1.4)
+
+Copy files to the following directory path.
+
+```
+.
+├── atmosphere
+│   └── contents
+│       └── 420000000007E51A
+│           ├── toolbox.json
+│           ├── exefs.nsp
+│           └── flags
+│               └── boot2.flag
+├── config
+│   └── ocean
+│       └── config.json
+└── switch
+    └── .overlays
+        ├── ovlmenu.ovl
+        └── Ocean-Modifier.ovl
+```
+
+### Config.json
+
+```json
+{
+    "event": [
+        0,
+        0,
+        0
+    ],
+    "seed": 1234567890,
+    "tide": [
+        2,
+        2,
+        2
+    ]
+}
 ```
